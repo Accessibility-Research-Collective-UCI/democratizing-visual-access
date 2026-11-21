@@ -1,1 +1,75 @@
 @import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-raleway);
+  --font-heading: var(--font-raleway);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-brand-orange: #c75215;
+  --color-brand-orange-dark: #a8430d;
+  --color-brand-teal: #15616d;
+  --color-brand-teal-dark: #0f4a53;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #4d5256;
+  --heading: #363a3c;
+  --primary: #c75215;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f4;
+  --secondary-foreground: #363a3c;
+  --muted: #f5f5f4;
+  --muted-foreground: #6b7075;
+  --accent: #15616d;
+  --accent-foreground: #ffffff;
+  --border: #e5e7eb;
+  --ring: #c75215;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+
+  body {
+    @apply bg-background text-foreground text-base leading-relaxed;
+  }
+
+  p {
+    @apply text-xl leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading);
+  }
+
+  a:not(.no-underline) {
+    @apply text-accent decoration-accent/40 hover:bg-accent hover:text-accent-foreground rounded-sm px-0.5 font-medium underline underline-offset-2 motion-safe:transition-colors hover:decoration-transparent;
+  }
+}

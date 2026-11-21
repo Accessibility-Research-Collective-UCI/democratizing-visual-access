@@ -27,7 +27,7 @@ pnpm run build
 
 Use `pnpm run format` to format files. The production build exports static files
 to `out/` and uses `/democratizing-visual-access` as its base path.
-If the repository name changes, update `basePath` in `next.config.ts` and the
+If the repository name changes, update `basePath` in `site.config.ts` and the
 static export assertion in `.github/workflows/deploy.yml`.
 
 ## GitHub Pages

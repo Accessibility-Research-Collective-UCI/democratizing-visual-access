@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
+import { basePath } from "./site.config";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath:
-    process.env.NODE_ENV === "production" ? "/democratizing-visual-access" : "",
+  basePath,
   trailingSlash: true,
 };
 
