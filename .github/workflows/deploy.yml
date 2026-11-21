@@ -32,7 +32,7 @@ jobs:
       - name: Check static export
         run: |
           test -f out/index.html
-          grep -q 'Disability-centric model evaluation' out/index.html
+          grep -q 'Disability-Centric Model Evaluation' out/index.html
           test -f out/repack-paper.pdf
           for name in kapil anne-marie erik arielle ali; do
             test -f "out/profiles/$name.webp"
